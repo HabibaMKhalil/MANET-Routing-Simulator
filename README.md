@@ -38,7 +38,7 @@
 
 ---
 
-## 🛠️ Tech Stack  
+## 🛠️ Tech Stack 
 - **NS2** (Network Simulator 2)  
 - **TCL** (Simulation scripting)  
 - **Python** (Visualization/GUI)  
