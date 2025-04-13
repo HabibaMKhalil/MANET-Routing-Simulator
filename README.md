@@ -1,37 +1,58 @@
-# 🌐 MANET Routing Protocol Simulator  
-*Comparing Proactive vs Reactive Routing in Mobile Ad-Hoc Networks*  
+🌐 MANET Routing Protocol Simulator
+A comprehensive MANET routing simulator comparing proactive/reactive protocols with TCL/NS2, Python visualization, and performance analysis. Includes GUI-based node movement simulations.
 
-![Demo](https://via.placeholder.com/800x400?text=MANET+Simulation+Screenshot)  
+---
 
-## ✨ Features  
-- **Dual Protocol Simulation**:  
-  - Proactive (DSDV) via `proactive_routing.py`  
-  - Reactive (AODV) via `reactive_protocol.py`  
-- **NS2/TCL Integration**: `sim.tcl` for network simulations  
-- **Performance Analysis**:  
-  - AWK script (`performance.awk`) calculates throughput, PDR, delay  
-  - Python visualization (`graph.py`) generates metric comparisons  
-- **Interactive GUI**: Node movement visualization with TKinter  
+## 📖 Table of Contents  
+- [Features](#Features)  
+- [Performance Metrics](#performance-metrics)  
+- [Tech Stack](#tech-stack)  
+- [Quick Start](#quick-start)  
+- [File Structure](#file-structure)  
+- [Usage Examples](#usage-examples)  
+- [Expected Output](#expected-output)  
+- [License](#license)
 
-## 📊 Performance Metrics  
-- Throughput (kbps)  
-- Packet Delivery Ratio (%)  
-- Average Delay (s)  
-- Packet Loss (%)  
-- Overhead (%)  
+## ✨ Features
+Dual Protocol Simulation:
 
-## 🛠️ Tech Stack  
-- **NS2** (Network Simulator 2)  
-- **TCL** (Simulation scripting)  
-- **Python** (Visualization/GUI)  
-- **AWK** (Log processing)  
+Proactive (DSDV) via proactive_routing.py
 
-## 🚀 Quick Start  
-1. Run NS2 simulation:  
-   ```bash
-   ns sim.tcl <nodes> <protocol> <src> <dest> <src2> <dest2>
-   # Example:
-   ns sim.tcl 20 AODV 1 5 3 8
+Reactive (AODV) via reactive_protocol.py
+
+NS2/TCL Integration: sim.tcl for network simulations
+
+Performance Analysis:
+
+AWK script (performance.awk) calculates throughput, PDR, delay
+
+Python visualization (graph.py) generates metric comparisons
+
+Interactive GUI: Node movement visualization with TKinter
+
+## 📊 Performance Metrics
+Metric	Description
+Throughput (kbps)	Data transfer rate
+Packet Delivery Ratio (%)	Successful packet reception
+Average Delay (s)	End-to-end communication delay
+Packet Loss (%)	Percentage of lost packets
+Overhead (%)	Routing protocol overhead
+
+## 🛠️ Tech Stack
+NS2 (Network Simulator 2)
+
+TCL (Simulation scripting)
+
+Python (Visualization/GUI)
+
+AWK (Log processing)
+
+## 🚀 Quick Start
+Run NS2 simulation:
+
+bash
+Copy
+ns sim.tcl <nodes> <protocol> <src> <dest> <src2> <dest2>
 Generate metrics:
 
 bash
@@ -42,30 +63,26 @@ Visualize results:
 bash
 Copy
 python3 graph.py
-For GUI simulations:
 
-bash
-Copy
-python3 proactive_routing.py  # or reactive_protocol.py
-📂 File Structure
+## 📂 File Structure
 Copy
 .
 ├── sim.tcl                  # NS2 simulation script
 ├── performance.awk          # Metric calculation
 ├── graph.py                 # Results visualization
 ├── proactive_routing.py     # DSDV GUI simulator
-├── reactive_protocol.py     # AODV GUI simulator
-└── performance.txt          # Generated metrics
-📝 Usage Examples
-1. NS2 Simulation:
+└── reactive_protocol.py     # AODV GUI simulator
+
+## 📝 Usage Examples
+NS2 Command:
+
+bash
+ns sim.tcl 20 AODV 1 5 3 8  # 20 nodes, AODV protocol, two routes
+GUI Simulation:
 
 bash
 Copy
-ns sim.tcl 15 DSDV 2 10  # 15 nodes, DSDV protocol, src=2, dest=10
-2. GUI Simulation:
+python3 proactive_routing.py  # DSDV interactive mode
 
-python
-Copy
-python3 reactive_protocol.py  # Interactive AODV simulation
-📊 Expected Output
+## 📊 Expected Output
 Metrics Graph
