@@ -31,7 +31,7 @@
 | Metric               | Description                          |
 |----------------------|--------------------------------------|
 | Throughput (kbps)    | Data transfer rate                   |
-| Packet Delivery Ratio (%) | Successful packet reception       |
+| Packet Delivery Ratio (%) | Successful packet reception     |
 | Average Delay (s)    | End-to-end communication delay       |
 | Packet Loss (%)      | Percentage of lost packets           |
 | Overhead (%)         | Routing protocol overhead            |
@@ -50,34 +50,37 @@
 1. Run NS2 simulation:  
    ```bash
    ns sim.tcl <nodes> <protocol> <src> <dest> <src2> <dest2>
-Generate metrics:
+   ```
+   
+2. Generate metrics:
+  ```bash
+  awk -f performance.awk output.tr > performance.txt
+  ```
 
-bash
-Copy
-awk -f performance.awk output.tr > performance.txt
-Visualize results:
+3. Visualize results:
+  ```bash
+  python3 graph.py
+  ```
 
-bash
-Copy
-python3 graph.py
-📂 File Structure
-Copy
-.
-├── sim.tcl                  # NS2 simulation script
-├── performance.awk          # Metric calculation
-├── graph.py                 # Results visualization
-├── proactive_routing.py     # DSDV GUI simulator
-└── reactive_protocol.py     # AODV GUI simulator
-📝 Usage Examples
-NS2 Command:
+## 📂 File Structure
+                            
+├── sim.tcl                  # NS2 simulation script                                  
+├── performance.awk          # Metric calculation                            
+├── graph.py                 # Results visualization                            
+├── proactive_routing.py     # DSDV GUI simulator                     
+└── reactive_protocol.py     # AODV GUI simulator                               
 
-bash
-Copy
-ns sim.tcl 20 AODV 1 5 3 8  # 20 nodes, AODV protocol, two routes
-GUI Simulation:
+## 📝 Usage Examples
 
-bash
-Copy
-python3 proactive_routing.py  # DSDV interactive mode
-📊 Expected Output
+1. NS2 Command:
+  ```bash
+  ns sim.tcl 20 AODV 1 5 3 8  # 20 nodes, AODV protocol, two routes
+  ```
+
+2. GUI Simulation:
+  ```bash
+  python3 proactive_routing.py  # DSDV interactive mode
+  ```
+
+## 📊 Expected Output
 Metrics Graph
