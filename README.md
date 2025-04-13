@@ -82,4 +82,4 @@
   ```
 
 ## 📊 Expected Output
-Metrics Graph
+![Metrics](https://github.com/user-attachments/assets/ec93d4c6-89da-47a5-9fd1-49e2cc45ad9f)
