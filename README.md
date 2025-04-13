@@ -6,7 +6,7 @@
 ## 📖 Table of Contents  
 - [Features](#-features)  
 - [Performance Metrics](#-performance-metrics)  
-- [Tech Stack](#-tech-stack)  
+- [Tech Stack](#tech-stack)  
 - [Quick Start](#-quick-start)  
 - [File Structure](#-file-structure)  
 - [Usage Examples](#-usage-examples)  
