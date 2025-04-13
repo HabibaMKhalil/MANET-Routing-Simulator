@@ -10,8 +10,7 @@
 - [Quick Start](#-quick-start)  
 - [File Structure](#-file-structure)  
 - [Usage Examples](#-usage-examples)  
-- [Expected Output](#-expected-output)  
-- [License](#-license)
+- [Expected Output](#-expected-output)
 
 ---
 
